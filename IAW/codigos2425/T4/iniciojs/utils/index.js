@@ -35,12 +35,13 @@ if (experiencia == true) {
 
 
 // busqueda por clase (ej: btn o btn-primary), etiqueta (ej: button) o identificador (ej: botonEnviar). Se suele utilizar id.
-
 let boton = document.querySelector("#botonEnviar");
 // si quiero buscar por id se pone # + id
 // si quiero buscar por clase se pone . + nombre de la clase
 // si quiero buscar por etiqueta se pone "nombre de la etiqueta"
 console.log(boton);
+
+let inputNombre = document.querySelector("#inputNombre");
 
 // busqueda por varios al mismo tiempo. En este ejemplo por varios inputs
 let inputs = document.querySelectorAll("input");
@@ -51,7 +52,9 @@ boton.addEventListener("click", () => {
     alert("Enhorabuena, reto completado")
 });
 
-
-
+// determino lo que pasa cuando pusan al boton + que salga el nombre 
+boton.addEventListener("click", () => {
+    alert("Enhorabuena, reto completado " + inputNombre.value);
+});
 
 
